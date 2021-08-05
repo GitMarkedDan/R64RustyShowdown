@@ -86,13 +86,12 @@ mincd = {{60},{100,30},{0,20},{50,50},{40,50,25}}
 maxcd = {{90},{120,60},{0,30},{90,80},{60,80,40}}
 
 function createButton(name,position,text,func,parent,col)
-    local col = col Color3.fromRGB(255,0,0)
     parent = parent or game.Players.LocalPlayer.PlayerGui.UI.pause.bg.pause
     local Xpos = Xpos or 0.1
     unloop = false
     Button = Instance.new("TextButton")
     Button.Font = Enum.Font.SourceSansBold
-    Button.TextColor3 = col
+    Button.TextColor3 = Color3.new(1,1,1)
     Button.Name = name
     Button.Position = position
     Button.Size = game.Players.LocalPlayer.PlayerGui.UI.pause.bg.pause.snap.Size
@@ -124,10 +123,10 @@ end
 
 game:GetService("UserInputService").InputBegan:Connect(function()
     if not game.Players.LocalPlayer.PlayerGui.UI.pause.bg.pause:FindFirstChild("Clear") then
-        createButton("Clear", UDim2.new(0.75,0,0,0),"Clear Extra ICs", function()
+        createButton("Clear", UDim2.new(0.75,0,-0.05,0),"Clear Extra ICs", function()
             stuff.gd[5] = string.sub(stuff.gd[5],0,64)
             game:GetService("Workspace").share.save:FireServer(stuff.gd)
-        end,Color3.new(1,1,1))
+        end)
         local but = createButton("hardmode", UDim2.new(-0.5,0,0.05,0),"Enable hardmode", function()
             local butt = game.Players.LocalPlayer.PlayerGui.UI.pause.bg.pause.hardmode
             if easy then
@@ -138,12 +137,10 @@ game:GetService("UserInputService").InputBegan:Connect(function()
                 easy = true
             end
         end)
-        if easy then
+        if not easy then
             but.TextColor3 = Color3.fromRGB(0,255,0)
-            easy = false
         else 
             but.TextColor3 = Color3.fromRGB(255,0,0)
-            easy = true
         end
         but = createButton("instakill", UDim2.new(0.5,0,0.05,0),"Enable intsakill", function()
             local butt = game.Players.LocalPlayer.PlayerGui.UI.pause.bg.pause.instakill
@@ -155,12 +152,10 @@ game:GetService("UserInputService").InputBegan:Connect(function()
                 oko = true
             end
         end)
-        if oko then
+        if not oko then
             but.TextColor3 = Color3.fromRGB(255,0,0)
-            oko = false
         else 
             but.TextColor3 = Color3.fromRGB(0,255,0)
-            oko = true
         end
         but = createButton("buff", UDim2.new(0,0,0,0),"Enable buffed attacks", function()
             local butt = game.Players.LocalPlayer.PlayerGui.UI.pause.bg.pause.buff
@@ -172,16 +167,13 @@ game:GetService("UserInputService").InputBegan:Connect(function()
                 buffedattacks = true
             end
         end)
-        if buffedattacks then
+        if not buffedattacks then
             but.TextColor3 = Color3.fromRGB(255,0,0)
-            buffedattacks = false
         else 
             but.TextColor3 = Color3.fromRGB(0,255,0)
-            buffedattacks = true
         end
     end
 end)
-
 
 
 
@@ -1778,4 +1770,6 @@ while true do
     end
     wait()
 end
---ignore dis its just to make the amount of lines go to 1750
+--ignore dis its just to make the amount of lines go to 1775
+
+--1775
