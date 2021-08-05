@@ -1,4 +1,5 @@
 saveice = saveice or false
+print(saveice)
 Iserv = game:GetService("InsertService")
 TS = game:GetService("TweenService")
 canclone = true
