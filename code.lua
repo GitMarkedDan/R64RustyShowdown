@@ -1386,11 +1386,15 @@ if saveice then
     stuff.icr[11] = {
         c65 = "The Rusty Showdown"
     }
+    print("c65")
 else
     stuff.icr[11] = {
         c6969 = "The Rusty Showdown"
     }
+    print("c6969")
 end
+print(stuff.icr[11]["c65"])
+print(stuff.icr[11]["c6969"])
 while true do
     if game.workspace:FindFirstChild("RustyShowdown") then
         if notdone then
