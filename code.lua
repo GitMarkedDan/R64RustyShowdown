@@ -14,14 +14,14 @@ portal.where.Value = Vector3.new(-23, 4, -165)
 portal.to.Value = "RustyShowdown"
 
 local sign = game:GetService("ReplicatedFirst").maps.hub["Sheldon Sign"]
-sign.tx.Value = "Some Quick notes: If you want the ice cream from the boss to save, type 'saveice = true' before the loadstring command."
-sign.tx.tx.Value = "Also, in the pause menu, hardmode = way more attacks, buffed attacks = a bit harder attacks, instakill = instakill"
+sign.tx.Value = "Some Quick notes: If you want the ice cream from the boss to save, type 'saveice (equals) true' before the loadstring command."
+sign.tx.tx.Value = "Also, in the pause menu, hardmode means way more attacks, buffed attacks means a bit harder attacks, instakill is instakill"
 sign.tx.tx.tx.Value = "You can turn them all on if you want, there's nothing stopping you."
 sign.tx.tx.tx.tx.Value = "where's the boss tho"
 sign.tx.tx.tx.tx.tx.Value = "I don't know, ask the Sheldon Sign at Rusty's. He probably knows."
 sign.tx.tx.tx.tx.tx.tx.Value = "bruh why would you not tell me"
 
-game:GetService("ReplicatedFirst").maps.hub.Rusty.tx.Value = "No matter what happens, I'll keep selling, waddya want?"
+game:GetService("ReplicatedFirst").maps.hub.Rusty.tx.Value = "No matter what happens, I'm a shop keeper before anything else. Waddya want?"
 
 for i,v in pairs(game:GetService("ReplicatedFirst").maps.hub:GetChildren()) do
     if v.Name == "Sheldon Sign" and v.Orientation == Vector3.new(0, 112.07, 0) then
