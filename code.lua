@@ -1,5 +1,4 @@
 saveice = saveice or false
-print(saveice)
 Iserv = game:GetService("InsertService")
 TS = game:GetService("TweenService")
 canclone = true
@@ -1384,17 +1383,13 @@ end)
 stuff.icrt[11] = "???"
 if saveice then
     stuff.icr[11] = {
-        c65 = "The Rusty Showdown"
+        c68 = "The Rusty Showdown"
     }
-    print("c65")
 else
     stuff.icr[11] = {
         c6969 = "The Rusty Showdown"
     }
-    print("c6969")
 end
-print(stuff.icr[11]["c65"])
-print(stuff.icr[11]["c6969"])
 while true do
     if game.workspace:FindFirstChild("RustyShowdown") then
         if notdone then
