@@ -11,7 +11,7 @@ end
 
 local thung = game:GetObjects('rbxassetid://8264903795')[1]
 print(thung.Version.Value)
-assert(thung.Version.Value == "1.36")
+assert(thung.Version.Value == "1.37")
 thung.Parent = game:GetService("ReplicatedFirst").maps
 
 local requestfunc = http_request or request or HttpPost or syn.request
@@ -442,7 +442,7 @@ stuff.toattack = function()
                     2,
                     Enum.EasingStyle.Linear,
                     Enum.EasingDirection.Out
-                ), {Position = Vector3.new(-22, 20, -11.5)})
+                ), {Position = Vector3.new(-22.889, 21, -12)})
                 coroutine.wrap(function()
                     tween:Play()
                     tween.Completed:Wait()
